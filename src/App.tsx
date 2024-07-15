@@ -11,6 +11,7 @@ const App = () => {
         title="Squad 1"
         type="menu"
         color="var(--gray-1100)"
+        active={false}
       />
     </>
   );

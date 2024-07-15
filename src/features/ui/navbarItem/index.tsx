@@ -9,17 +9,26 @@ interface IProps {
   title: string;
   type: "menu" | "submenu";
   color: string;
+  active: boolean;
 }
 
-export const NavbarItem: FC<IProps> = ({ list, icon, title, type, color }) => {
+export const NavbarItem: FC<IProps> = ({
+  list,
+  icon,
+  title,
+  type,
+  color,
+  active,
+}) => {
   return (
     <S.Container
       $main={type === "menu"}
       $type={list ? true : false}
       $color={color}
+      $active={active}
     >
-      {list && <Icon name={list} color={color} />}
-      <Icon name={icon} color={color} />
+      {list && <Icon name={list} color={active ? "var(--blue-main)" : color} />}
+      <Icon name={icon} color={active ? "var(--blue-main)" : color} />
       <span className="medium sm poppins">{title}</span>
     </S.Container>
   );

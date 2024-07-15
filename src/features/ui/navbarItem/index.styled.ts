@@ -4,6 +4,7 @@ interface Props {
   $main: boolean;
   $type: boolean;
   $color: string;
+  $active: boolean;
 }
 
 const Container = styled.div<Props>`
@@ -27,7 +28,8 @@ const Container = styled.div<Props>`
     border-left: 3px solid var(--blue-main);
     background-color: var(--blue-100);
     top: 0;
-    transform: ${({ $main }) => $main && "translateX(-100%)"};
+    transform: ${({ $main, $active }) =>
+      $main && !$active && "translateX(-100%)"};
     opacity: ${({ $main }) => !$main && 0};
     transition: all ease-in-out 0.4s;
   }
@@ -65,12 +67,13 @@ const Container = styled.div<Props>`
 
   svg:first-child {
     transition: all ease-in-out 0.4s;
+    transform: ${({ $active }) => $active && "rotate(90deg)"};
   }
 
   span {
     position: relative;
     z-index: 3;
-    color: ${({ $color }) => $color};
+    color: ${({ $color, $active }) => ($active ? "var(--blue-main)" : $color)};
   }
 `;
 
