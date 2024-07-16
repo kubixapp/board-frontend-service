@@ -1,0 +1,7 @@
+@use "@styles/globalStyles.scss" as G;
+
+.body {
+  padding: 20px 24px;
+  display: grid;
+  background-color: var(--gray-100);
+}
