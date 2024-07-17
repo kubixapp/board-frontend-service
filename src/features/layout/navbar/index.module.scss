@@ -3,5 +3,40 @@
 .body {
   padding: 20px 24px;
   display: grid;
-  background-color: var(--gray-100);
+  grid-template-rows: auto 1fr;
+  gap: 40px;
+  background-color: var(--gray-200);
+  min-height: 100vh;
+  border-right: 1px solid var(--gray-400);
+
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+
+    .logo {
+      &_mini {
+        display: none;
+      }
+    }
+
+    .narrow {
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+      outline: none;
+    }
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto auto;
+    gap: 24px;
+
+    .border {
+      width: 100%;
+      height: 1px;
+      background-color: var(--gray-500);
+    }
+  }
 }

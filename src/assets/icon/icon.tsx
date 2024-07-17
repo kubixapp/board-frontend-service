@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import { IconNames, Icons } from "./icons";
 
 interface IProps {
@@ -7,9 +7,6 @@ interface IProps {
 }
 
 export const Icon: FC<IProps> = ({ name, color }) => {
-  useEffect(() => {
-    console.log(name, color);
-  }, []);
   return (
     <svg
       width="24"
