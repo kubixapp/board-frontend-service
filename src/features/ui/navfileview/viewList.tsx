@@ -1,4 +1,4 @@
-import { FC, Fragment, useEffect, useState } from "react";
+import { FC, Fragment, useState } from "react";
 import S from "./viewList.module.scss";
 import { INavProps } from "@utils/typeUtils";
 import { NavbarItem } from "../navbarItem";

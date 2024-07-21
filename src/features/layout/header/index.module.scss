@@ -1,0 +1,29 @@
+@use "@styles/globalStyles.scss" as G;
+
+.header {
+  background-color: var(--gray-200);
+  border-bottom: 1px solid var(--gray-400);
+  padding: 16px 24px;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  &_userinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    p {
+      color: var(--gray-1200);
+      span {
+        color: var(--gray-900);
+      }
+    }
+  }
+
+  &_control {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}

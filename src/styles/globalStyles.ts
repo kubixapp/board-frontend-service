@@ -57,7 +57,7 @@ const GlobalStyles = createGlobalStyle`
     --aquamarine-1100: #00442c;
     --aquamarine-1200: #002d1d;
 
-    --gray-100:  #d9d5d5;
+    --gray-100:  #ffffff;
     --gray-200:  #f7f7f7;
     --gray-300:  #f3f3f8;
     --gray-400:  #e9ecef;
@@ -166,6 +166,10 @@ h6 {
 
 .poppins {
     font-family: "Poppins", sans-serif;
+}
+
+.clash {
+    font-family: "Clash Display";
 }
 
 * {
